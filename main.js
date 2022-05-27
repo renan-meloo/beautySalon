@@ -8,7 +8,7 @@ for (const element of toggle) {
   })
 }
 
-// Ao clicar em um item do menu, esconder o menu
+// Click item menu - Esconder menu
 const links = document.querySelectorAll('nav ul li a')
 
 for (const link of links) {
@@ -17,7 +17,7 @@ for (const link of links) {
   })
 }
 
-// Colocando a sombra do header quando der scroll
+// Sombra do header quando der scroll
 const header = document.querySelector('#header')
 const navHeight = header.offsetHeight
 
@@ -27,4 +27,11 @@ window.addEventListener('scroll', function () {
   } else {
     header.classList.remove('scroll')
   }
+})
+
+// Slide testemunhos - Swiper
+const swiper = new Swiper('.swiper-container', {
+  slidesPerView: 1,
+  mousewheel: true,
+  keyboard: true
 })
